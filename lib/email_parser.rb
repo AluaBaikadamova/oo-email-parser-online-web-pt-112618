@@ -9,7 +9,7 @@ def initialize(emails)
   end
   def parse
     email=[]
-    email=emails.split(/[\s,]/)
+    email=emails.split(/[,\s]/)
     email=email.uniq
     return email
   end
