@@ -11,7 +11,7 @@ def initialize(emails)
     email=[]
     email=emails.split(/[,\s]/)
     email=email.uniq
-    email.compact!.delete_if{|arrVal| arrVal.class == String and arrVal.empty?}
+    email.reject!{|a| a.to_s.strip.empty?}
     return email
   end
 end
