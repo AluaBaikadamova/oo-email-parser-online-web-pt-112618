@@ -11,6 +11,7 @@ def initialize(emails)
     email=[]
     email=emails.split(/[,\s]/)
     email=email.uniq
+    email.reject { |e| e.to_s.empty? }
     return email
   end
 end
